@@ -1,0 +1,10 @@
+{
+  "name": "darelihsan-parents",
+  "version": "1.0.0",
+  "description": "فضاء أولياء دار الإحسان",
+  "private": true,
+  "scripts": {
+    "start": "npx serve -p 8002 .",
+    "dev": "npx serve -p 8002 ."
+  }
+}

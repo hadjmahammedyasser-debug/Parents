@@ -1,0 +1,22 @@
+/* شريط تثبيت التطبيق + تحسينات اللمس للهاتف (أهداف لمس ≥ 44px، منع تكبير iOS عند الكتابة، مناطق آمنة) */
+.pwa-bar{position:fixed;inset-inline:12px;bottom:max(12px,env(safe-area-inset-bottom));z-index:9999;display:flex;align-items:center;gap:10px;
+  padding:10px 12px;border-radius:14px;background:#0C2D55;color:#fff;box-shadow:0 8px 28px rgba(0,0,0,.28);font:600 14px/1.4 IBM Plex Sans Arabic,system-ui,sans-serif}
+.pwa-msg{flex:1}
+.pwa-btn{min-height:44px;padding:0 18px;border:0;border-radius:10px;background:#E5C47F;color:#081B33;font:700 14px IBM Plex Sans Arabic,system-ui,sans-serif;cursor:pointer}
+.pwa-x{min-width:44px;min-height:44px;border:0;background:transparent;color:#fff;font-size:24px;line-height:1;cursor:pointer}
+@media (min-width:700px){.pwa-bar{inset-inline:auto 20px;max-width:420px}}
+
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+a,button,summary,label,select{touch-action:manipulation}
+@media (pointer:coarse){
+  input,select,textarea{font-size:16px}
+  .lang,.linkbtn,.linkbtn.small{min-height:44px}
+  .fi p a{display:inline-flex;align-items:center;min-height:44px}
+  .fs a{min-height:44px}
+  .qr-card a,main a[href='index.html']{display:inline-flex;align-items:center;min-height:44px}
+}
+body{padding-inline:env(safe-area-inset-left) env(safe-area-inset-right)}
+
+/* زر «تثبيت التطبيق» في لوحة الإدارة (الكمبيوتر) */
+.install-btn { width: auto !important; padding-inline: 12px !important; gap: 6px; display: inline-flex; align-items: center; font-weight: 600; font-size: 13px; white-space: nowrap; }
+.install-btn[hidden], .linkbtn[data-install][hidden] { display: none !important; }
